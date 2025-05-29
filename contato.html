@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Becca Rok</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link rel="shortcut icon" href="img/logo.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="Becca Rok Logo" id="logo-img">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contato.html" class="active">Contato</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Seção Contato -->
+        <section id="contato" class="page-section animate__animated animate__fadeIn">
+            <div class="page-header">
+                <h2 class="section-title animate__animated animate__fadeInDown">Entre em Contato</h2>
+                <p class="section-subtitle animate__animated animate__fadeInUp animate__delay-1s">Estamos prontos para atender suas necessidades</p>
+            </div>
+
+            <div class="contact-container animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Rua Exemplo, 123 - Bairro - Cidade/UF</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>(00) 00000-0000</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>contato@beccarok.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <p>Segunda a Sexta: 9h às 18h</p>
+                    </div>
+                    
+                    <div class="social-media">
+                        <h3>Siga-nos nas redes sociais</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://wa.me/16994549960" class="social-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Envie-nos uma mensagem</h3>
+                    <form id="contactForm" onsubmit="return sendWhatsApp(event)">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-whatsapp">Enviar via WhatsApp <i class="fab fa-whatsapp"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="contact-cta animate__animated animate__fadeInUp animate__delay-2s">
+                <h3>Fale conosco agora mesmo pelo WhatsApp</h3>
+                <a href="https://wa.me/16994549960" class="btn btn-whatsapp btn-large">Iniciar Conversa <i class="fab fa-whatsapp"></i></a>
+            </div>
+            
+            <div class="back-link animate__animated animate__fadeInUp animate__delay-2s">
+                <a href="index.html"><i class="fas fa-arrow-left"></i> Voltar para o início</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="img/logo.png" alt="Becca Rok Logo" class="footer-logo-img">
+                <p>Produtos de alta qualidade para você</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Início</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="contato.html">Contato</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Becca Rok Produtos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

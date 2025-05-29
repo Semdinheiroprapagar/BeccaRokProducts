@@ -1,0 +1,12 @@
+Adicione aqui o arquivo 'logo.png' com o logotipo da sua empresa.
+
+Recomendações para o logo:
+- Formato: PNG com transparência
+- Dimensões: 200px x 50px (aproximadamente)
+- Cor: preferencialmente branco para melhor contraste com o fundo preto
+
+O logo será exibido no cabeçalho e no rodapé do site. Se não tiver um logo ainda, você pode criar um simples usando programas como:
+1. Canva (online): https://www.canva.com/
+2. Adobe Express (online): https://www.adobe.com/express/
+3. GIMP (gratuito): https://www.gimp.org/
+4. Adobe Photoshop (pago)

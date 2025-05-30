@@ -5,6 +5,7 @@
     --color-dark-gray: #333333;
     --color-gray: #666666;
     --color-light-gray: #f5f5f5;
+    --color-discount: #e74c3c;
     --transition-fast: 0.3s ease;
     --transition-medium: 0.5s ease;
     --transition-slow: 0.8s ease;
@@ -385,34 +386,64 @@ main {
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 40px;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5), transparent);
     color: var(--color-white);
-    z-index: 2;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity var(--transition-medium), transform var(--transition-medium);
     text-align: center;
+    z-index: 2;
+}
+
+.carousel-item:hover .carousel-caption {
+    opacity: 1;
     transform: translateY(0);
-    transition: transform 0.5s ease;
 }
 
 .carousel-caption h3 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     margin-bottom: 10px;
+    font-weight: 700;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .carousel-caption p {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.carousel-caption .price-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.carousel-caption .price-original {
+    font-size: 1rem;
+    text-decoration: line-through;
+    color: var(--color-light-gray);
+    opacity: 0.8;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.carousel-caption .price-discount {
+    font-size: 1.4rem;
+    color: var(--color-white);
     font-weight: 700;
-    margin-bottom: 20px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .carousel-caption .btn {
     display: inline-block;
-    padding: 15px 30px;
-    font-size: 1.1rem;
+    padding: 10px 20px;
+    margin-top: 5px;
+    transform: translateY(10px);
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease, background-color 0.3s ease;
+    transition: transform var(--transition-medium), opacity var(--transition-medium), background-color var(--transition-fast);
 }
 
 .carousel-item:hover .carousel-caption .btn {
@@ -628,10 +659,42 @@ main {
 }
 
 .product-price {
-    font-weight: 700;
     font-size: 1.4rem;
+    font-weight: 700;
     margin-bottom: 10px;
-    color: var(--color-dark-gray);
+    color: var(--color-black);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.price-original {
+    font-size: 1.1rem;
+    text-decoration: line-through;
+    color: var(--color-gray);
+    margin-right: 10px;
+}
+
+.price-discount {
+    color: var(--color-discount);
+    font-weight: 700;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.quantity-discount {
+    font-size: 0.9rem;
+    font-weight: 600;
+    background-color: var(--color-discount);
+    color: var(--color-white);
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-top: 5px;
+    display: inline-block;
 }
 
 .product-description {
